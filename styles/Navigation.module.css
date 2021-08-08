@@ -1,0 +1,47 @@
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.navItems {
+  /* position: absolute; */
+  color: white;
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.navItem:hover {
+  color: #aed2b0;
+}
+
+.tagLine {
+  color: white;
+  font-weight: 600;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+.taglineUnderline {
+  width: 25%;
+  border: 2px solid;
+  color: white;
+}
+
+.sideBarUl {
+  display: block;
+  padding: 25px;
+  position: fixed;
+  top: 100px;
+  width: 300px;
+}
+
+.sideBarLogo { 
+  position: fixed;
+  height: auto;
+  width: 300px;
+  margin-top: 10px;
+}
