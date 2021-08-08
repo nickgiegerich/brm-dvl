@@ -11,7 +11,7 @@ export const Content = () => {
         *click the image to download
       </div>
       <div className="flex justify-center">
-        <a className="z-10" target="_blank" href={newPatientForm}>
+        <a className="z-10" target="_blank" rel="noreferrer" href={newPatientForm}>
           <img className="shadow-xl rounded-2xl px-3" alt="New Patient Form" src={formImg} />
           <span>*click image to download</span>
         </a>
