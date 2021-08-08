@@ -2,6 +2,7 @@ import styles from "../../styles/About.module.css";
 import FadeInWhenVisible from "../fadeInWhenVis/FadeInWhenVisible";
 import { Tab } from "../Tab";
 
+
 const tabContent = [
   {
     title: "Our Mission",
