@@ -32,7 +32,7 @@ export const Footer = () => {
             <Link href="/newpatients">New Patients</Link>
           </div>
           <div className="py-5">
-            <Link href="#">Services</Link>
+            <Link href="/services">Services</Link>
           </div>
         </div>
         <div className="flex-col sm">

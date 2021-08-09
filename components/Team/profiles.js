@@ -77,7 +77,7 @@ export const Profiles = () => {
               className=" z-10 bg-secondary font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               onClick={() => handleReadMore(member.name, member.more)}
             >
-              <span className="text-gray-500 underline">READ MORE</span>
+              <span className="text-gray-100 underline">READ MORE</span>
             </button>
           </div>
         </div>

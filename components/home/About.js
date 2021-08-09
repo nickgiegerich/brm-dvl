@@ -15,7 +15,7 @@ const tabContent = [
       "ability to heal and find balance, and we are committed to " +
       "partnering with each patient throughout their journey to wellness.",
     multiContent: "",
-    tabImg: "/images/tabs/thirdImg.png",
+    tabImg: "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     title: "Functional Medicine",
@@ -31,7 +31,7 @@ const tabContent = [
       "Integrative medicine is the practice of medicine that focuses on the whole person and unites all appropriate therapeutic approaches, healthcare professionals, and disciplines to achieve optimal health and healing. It is based upon a model of health and wellness--as opposed to a model of disease--and explores how a patient’s physical, mental, spiritual, and social wellbeing may be influencing their current health status. ",
     multiContent:
       "This practice of medicine favors the use of low-tech and low-cost interventions whenever possible, and coordinates all aspects of a patient’s health plan. Your integrative medicine providers strive to work in tandem with your primary care providers, integrative health coaches, nutritionists, massage therapists, and acupuncturists. ",
-    tabImg: "/images/tabs/thirdImg.png",
+    tabImg: "https://images.pexels.com/photos/161599/scent-sticks-fragrance-aromatic-161599.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
   },
 ];
 
@@ -55,11 +55,6 @@ export const About = () => {
                 tab={tab.title}
               >
                 <div>
-                  {/* <p className="py-4 px-5 text-lg text-black">
-                    <span>{tab.content}</span>
-                    <br />
-                    <span className="mt-5">{tab.multiContent}</span>
-                  </p> */}
                   <p className="text-black text-lg py-4 px-5">
                   {tab.content}
                   </p>
@@ -67,12 +62,9 @@ export const About = () => {
                   {tab.multiContent}
                   </p>
                 </div>
-                <div className="flex justify-center py-4">
-                  <img alt={`Image-${idx}`} className="rounded-2xl object-contain" src={tab.tabImg} />
+                <div className="flex justify-center py-4 m-5">
+                  <img alt={`Image-${idx}`} className="rounded-2xl shadow-2xl object-contain" src={tab.tabImg} />
                 </div>
-                {/* <p className=" pb-10 px-5 text-lg text-black">
-                  {tab.multiContent}
-                </p> */}
               </Tab.TabPane>
             ))}
           </Tab>

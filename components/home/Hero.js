@@ -27,20 +27,19 @@ export const Hero = () => {
         blur={{ min: -15, max: 10 }}
         bgImageStyle={{ objectFit: "cover" }}
       >
-        <div >
-          <div className="flex flex-col  justify-evenly text-center mx-auto h-screen w-screen">
+        <div>
+          <div className="flex flex-col justify-evenly text-center mx-auto h-screen w-screen">
             <motion.img
               variants={logoVariants}
               src={svgLogo}
               alt="Balance Regenerative Medicine"
               height="600px"
               width="600px"
-              className="mx-auto"
+              className="mx-auto opacity-1 bg-white bg-opacity-50 rounded-full shadow-2xl"
             />
+
             <div>
-              <h1 className="text-5xl text-white">
-                Get Answers. Get Better.
-              </h1>
+              <h1 className="text-5xl text-white">Get Answers. Get Better.</h1>
               <div className="border-b-4 w-1/5 m-auto pt-5 text-white" />
             </div>
           </div>
