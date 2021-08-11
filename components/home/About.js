@@ -64,7 +64,7 @@ export const About = () => {
                 <div className="flex justify-center py-4 m-5">
                   <img
                     alt={`Image-${idx}`}
-                    className="rounded-2xl shadow-2xl object-contain"
+                    className="rounded-2xl shadow-2xl object-cover"
                     src={tab.tabImg}
                   />
                 </div>
