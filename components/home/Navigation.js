@@ -10,22 +10,22 @@ export const DesktopNavigation = (props) => {
       >
         <ul className="font-medium">
           <Link href="/">
-            <li className="bg-gradient-to-r from-secondary to-secondary bg-growing-underline">
+            <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Home
             </li>
           </Link>
           <Link href="/team/providers">
-            <li className="bg-gradient-to-r from-secondary to-secondary bg-growing-underline">
+            <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Providers
             </li>
           </Link>
           <Link href="/newpatients">
-            <li className="bg-gradient-to-r from-secondary to-secondary bg-growing-underline">
+            <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               New Patients
             </li>
           </Link>
           <Link href="/services">
-            <li className="bg-gradient-to-r from-secondary to-secondary bg-growing-underline">
+            <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Services
             </li>
           </Link>

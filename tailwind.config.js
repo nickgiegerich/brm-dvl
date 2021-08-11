@@ -1,21 +1,23 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: { 
-      'montserrat': ['Montserrat']
+    fontFamily: {
+      montserrat: ["Montserrat"],
     },
     colors: {
-      primary: "#5E8F66",
-      secondary: "#9CAF88",
-      tan: "#BDA06A",
-      lightGray: "#404040",
-      black: "#000", 
+      primary: "#757976",
+      secondary: "#BCC3A7",
+      brown: "#CFC1A7",
+      sage: "#BCC3A7",
+      creme: "#FFFDF0",
+      beige: "#D9D6C2",
+      black: "#000",
       opBlack: "#808080",
       white: "#FFF",
-      gray: colors.gray
+      gray: colors.gray,
     },
     extend: {},
   },

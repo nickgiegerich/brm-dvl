@@ -51,13 +51,13 @@ export const Footer = () => {
           
           <div className="flex flex-row justify-evenly pt-3">
             <a className="text-4xl pr-5" href="#">
-              <FaFacebook />
+              <FaFacebook className="text-sage hover:text-beige"  />
             </a>
             <a className="text-4xl pr-5" href="#">
-              <FaInstagramSquare />
+              <FaInstagramSquare className="text-sage hover:text-beige" />
             </a>
             <a className="text-4xl pr-5" href="#">
-              <FaTwitterSquare />
+              <FaTwitterSquare className="text-sage hover:text-beige" />
             </a>
           </div>
           <div className="hidden">

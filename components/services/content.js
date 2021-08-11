@@ -71,10 +71,10 @@ export const Content = () => {
             culpa qui officia deserunt mollit anim id est laborum.
           </div>
           <div className="grid grid-cols-2 gap-3 pt-5">
-            <button className="transition ease-in-out uppercase bg-primary rounded-md py-4 shadow-2xl text-white hover:bg-gray-800">
+            <button className="transition ease-in-out uppercase bg-sage rounded-md py-4 shadow-2xl text-black hover:bg-primary hover:text-white">
               how can we help?
             </button>
-            <button className="transition ease-in-out uppercase bg-secondary rounded-md  py-4 shadow-2xl text-white hover:bg-gray-600">
+            <button className="transition ease-in-out uppercase bg-beige rounded-md  py-4 shadow-2xl text-black hover:bg-primary hover:text-white">
               schedule an appointment
             </button>
           </div>
@@ -90,7 +90,7 @@ export const Content = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-200 shadow-2xl rounded-t-3xl">
+      <div className="bg-gray-200  rounded-t-3xl">
         <div className="text-center text-5xl m-3">Lorem Ipsum</div>
         <div className="text-center text-xl m-3">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -108,7 +108,7 @@ export const Content = () => {
               {item.buttons.map((button, idx) => (
                 <button
                   key={`Button-${idx}`}
-                  className="transition ease-in-out duration-500 mb-1 bg-secondary py-5 px-10 rounded-md text-white hover:bg-primary"
+                  className="transition ease-in-out duration-500 mb-1 text-black bg-beige py-5 px-10 rounded-md hover:bg-sage"
                 >
                   {button.buttonTitle}
                 </button>

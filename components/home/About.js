@@ -42,9 +42,9 @@ export const About = () => {
       <div className="text-primary flex flex-col font-montserrat">
         <div className="text-center text-5xl py-10 bg-gray-100">
           <FadeInWhenVisible>
-            <h2 className="font-montserrat font-normal">lorem ipsum - dolor sit amet</h2>
+            <h2 className="font-montserrat font-normal text-black">lorem ipsum - dolor sit amet</h2>
           </FadeInWhenVisible>
-          <div className="border-b-4 w-1/12 m-auto pt-5" />
+          <div className="border-b-4 w-1/12 m-auto pt-5 border-primary" />
         </div>
 
         <div>

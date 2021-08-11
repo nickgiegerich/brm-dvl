@@ -25,7 +25,7 @@ export const Tab = ({ children, active = 0 }) => {
           <div
             key={`Tab-Grid-${idx}`}
             className={`text-center text-black text-lg md:text-2xl rounded-t-md py-8 cursor-pointer transform ease-in duration-100 font-montserrat font-bold ${
-              idx === activeTab ? "bg-white" : "bg-primary shadow-inner"
+              idx === activeTab ? "bg-brown " : "bg-primary shadow-inner"
             }`}
             onClick={() => setActiveTab(idx)}
           >
