@@ -5,7 +5,7 @@ const bgImage = "/images/providers/providers-hero.png";
 
 const titleVariants = {
   initial: {
-    x: 1000,
+    x: -1000,
   },
   animate: {
     x: 0,
@@ -33,7 +33,7 @@ export const Hero = () => {
           style={{ height: "50vh" }}
         >
           <div className="text-white text-5xl md:text-8xl  uppercase font-extralight font-mono">
-            <motion.div variants={titleVariants}>new patients</motion.div>
+            <motion.div className="font-semibold" variants={titleVariants}>new patients</motion.div>
           </div>
         </div>
       </Parallax>

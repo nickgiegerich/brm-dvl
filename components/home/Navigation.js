@@ -8,7 +8,7 @@ export const DesktopNavigation = (props) => {
         style={{ position: props.position, height: "fit-content" }}
         className={styles.navItems}
       >
-        <ul>
+        <ul className="font-medium">
           <Link href="/">
             <li className="bg-gradient-to-r from-secondary to-secondary bg-growing-underline">
               Home

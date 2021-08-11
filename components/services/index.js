@@ -29,7 +29,7 @@ export const Services = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.div variants={variants} initial="initial" animate="animate">
+      <motion.div variants={variants} initial="initial" animate="animate" className="font-montserrat">
         {/* DESKTOP NAVIGATION - show at > 600px */}
         <div className="desktopNav">
           <DesktopNavigation position={"absolute"} />

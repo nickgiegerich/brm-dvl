@@ -3,8 +3,9 @@ import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 
 const bgImage = "/images/home/bgImg.png";
-const logo = "/images/home/logo.png";
+const logoWhite = "/images/home/logo-white.svg";
 const svgLogo = "/images/home/svg_logo.svg";
+
 
 const logoVariants = {
   initial: {
@@ -31,15 +32,15 @@ export const Hero = () => {
           <div className="flex flex-col justify-evenly text-center mx-auto h-screen w-screen">
             <motion.img
               variants={logoVariants}
-              src={svgLogo}
+              src={logoWhite}
               alt="Balance Regenerative Medicine"
               height="600px"
               width="600px"
-              className="mx-auto opacity-1 bg-white bg-opacity-50 rounded-full shadow-2xl"
+              className="mx-auto"
             />
 
             <div>
-              <h1 className="text-5xl text-white">Get Answers. Get Better.</h1>
+              <h1 className="text-5xl text-white font-montserrat font-normal">Get Answers. Feel Better.</h1>
               <div className="border-b-4 w-1/5 m-auto pt-5 text-white" />
             </div>
           </div>

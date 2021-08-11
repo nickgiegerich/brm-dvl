@@ -62,19 +62,19 @@ export const Profiles = () => {
               src={member.picture}
             />
           </div>
-          <div className="mt-5">
+          <div className="mt-5 mx-3">
             {/* Name & Title */}
             <span className="texxt-black">{member.name}</span> <br />{" "}
             <span className="text-primary font-semibold">{member.title}</span>
           </div>
-          <div className=" text-gray-500 mr-5 text-center">
+          <div className=" text-gray-500 mr-5 mx-3 text-left">
             {/* desc */}
             {member.desc}
           </div>
           <div>
             {/* links */}
             <button
-              className=" z-10 bg-secondary font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className=" z-10 bg-secondary font-bold uppercase text-sm px-6 py-3 mx-3 rounded shadow hover:shadow-lg  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               onClick={() => handleReadMore(member.name, member.more)}
             >
               <span className="text-gray-100 underline">READ MORE</span>

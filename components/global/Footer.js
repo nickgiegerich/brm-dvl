@@ -21,7 +21,7 @@ export const Footer = () => {
             Copyright © 2021 Balance Regenrative Medicine. All rights reserved.
           </p>
         </div>
-        <div className="flex-col ">
+        <div className="flex flex-col justify-evenly">
           <div className="py-5">
             <Link href="/">Home</Link>
           </div>
@@ -35,11 +35,11 @@ export const Footer = () => {
             <Link href="/services">Services</Link>
           </div>
         </div>
-        <div className="flex-col sm">
-          <div className="py-5">
+        <div className="flex flex-col justify-center">
+          <div className="py-5 hidden">
             <p>Sign Up For Emails</p>
           </div>
-          <form className="my-4 flex">
+          <form className="my-4 hidden">
             <input
               className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
               placeholder="your@mail.com"
@@ -48,15 +48,8 @@ export const Footer = () => {
               Subscribe
             </button>
           </form>
-          <div>
-            <p>
-              <span className="underline">
-                <a href="#">Click Here</a>
-              </span>{" "}
-              to read our privacy policy
-            </p>
-          </div>
-          <div className="flex flex-row pt-3">
+          
+          <div className="flex flex-row justify-evenly pt-3">
             <a className="text-4xl pr-5" href="#">
               <FaFacebook />
             </a>
@@ -66,6 +59,14 @@ export const Footer = () => {
             <a className="text-4xl pr-5" href="#">
               <FaTwitterSquare />
             </a>
+          </div>
+          <div className="hidden">
+            <p>
+              <span className="underline">
+                <a href="#">Click Here</a>
+              </span>{" "}
+              to read our privacy policy
+            </p>
           </div>
         </div>
       </div>
