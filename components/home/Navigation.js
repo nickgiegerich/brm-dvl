@@ -62,7 +62,7 @@ export const DesktopNavigation = (props) => {
             onMouseOver={() => setDropdown(true)}
             onMouseLeave={() => setDropdown(false)}
           >
-            <Link href="/services">services</Link>
+            <Link href="/services">Services</Link>
             <Link href="/services">
               <BsChevronCompactDown />
             </Link>
@@ -75,7 +75,7 @@ export const DesktopNavigation = (props) => {
                 <Link key={`Service-Link-${idx}`} href={serviceLink}>
                   <div
                     key={`Service-${idx}`}
-                    className="hover:bg-sage text-3xl py-4 px-2 flex"
+                    className="hover:bg-sage text-xl py-4 px-2 flex"
                   >
                     {icon}
                     <span className="pl-1">{serviceTitle}</span>

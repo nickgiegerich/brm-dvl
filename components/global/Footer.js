@@ -5,19 +5,54 @@ import styles from "../../styles/Footer.module.css";
 
 const logo = "/images/home/logo.svg";
 const svgLogo = "/images/home/svg_logo.svg";
+const white_svgLogo = "/images/home/logo-white.svg";
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary text-white bg-opacity-75">
       <div className="flex flex-row flex-wrap-reverse mx-auto justify-evenly w-screen">
         <div className="flex-col sm:text-left text-center">
-          <Image src={svgLogo} alt="Balance Logo" height={150} width={150} />
-          <p className="max-w-lg text-left px-5">
-            Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
-            tempor incidunt ut labore et dolore magna aliqua. Hi omnes lingua,
-            institutis, legibus inter se differunt.
-          </p>
-          <p className="max-w-lg text-left pt-3 px-5 pb-3">
+          <Image
+            src={white_svgLogo}
+            alt="Balance Logo"
+            height={150}
+            width={150}
+          />
+          <div className="-mt-7 pb-8">
+            <span>
+              <a
+                target="_blank"
+                href="http://maps.google.com/?q=621+North+College+Rd,+Suite+103,+Twin+Falls,+Idaho+83301"
+                rel="noopener noreferrer"
+                className="text-green-400 lg:text-2xl md:text-xl text-xl hover:underline"
+              >
+                621 North College Rd, Suite 103, Twin Falls, Idaho 83301
+              </a>
+            </span>
+          </div>
+          <div className="grid grid-rows-3">
+            <div>
+              Phone:{" "}
+              <span>
+                <Link href="tel:2085393155">(208) 539-3155</Link>
+              </span>
+            </div>
+            <div>
+              Email:{" "}
+              <span>
+                <a href="mailto:info@balanceregenrative.org">
+                  info@balanceregenrative.org
+                </a>
+              </span>
+            </div>
+            <div>
+              Fax:{" "}
+              <span>
+                <Link href="tel:18665072545">1(866) 507-2545</Link>
+              </span>
+            </div>
+          </div>
+          <p className="max-w-lg text-left pt-3  pb-3">
             Copyright © 2021 Balance Regenrative Medicine. All rights reserved.
           </p>
         </div>
@@ -48,16 +83,16 @@ export const Footer = () => {
               Subscribe
             </button>
           </form>
-          
+
           <div className="flex flex-row justify-evenly pt-3">
             <a className="text-4xl pr-5" href="#">
-              <FaFacebook className="text-sage hover:text-beige"  />
+              <FaFacebook className="text-white hover:text-brown" />
             </a>
             <a className="text-4xl pr-5" href="#">
-              <FaInstagramSquare className="text-sage hover:text-beige" />
+              <FaInstagramSquare className="text-white hover:text-brown" />
             </a>
             <a className="text-4xl pr-5" href="#">
-              <FaTwitterSquare className="text-sage hover:text-beige" />
+              <FaTwitterSquare className="text-white hover:text-brown" />
             </a>
           </div>
           <div className="hidden">

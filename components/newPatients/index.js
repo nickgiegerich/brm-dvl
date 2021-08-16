@@ -29,7 +29,7 @@ export const NewPatients = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.div variants={variants} initial="initial" animate="animate" className="font-montserrat">
+      <motion.div variants={variants} initial="initial" animate="animate" className="font-maitree">
         {/* DESKTOP NAVIGATION - show at > 600px */}
         <div className="desktopNav">
           <DesktopNavigation position={"absolute"} />

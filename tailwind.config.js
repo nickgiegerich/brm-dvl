@@ -6,6 +6,16 @@ module.exports = {
   theme: {
     fontFamily: {
       montserrat: ["Montserrat"],
+      cormorant: [`"Cormorant Garamond"`],
+      martel: ["Martel"],
+      marcellus: ["Marcellus"],
+      arsenal: ["Arsenal"],
+      laila: ["Laila"],
+      encode: [`"Encode Sans Condensed"`],
+      niramit: ["Niramit"],
+      maitree: ["Maitree"],
+      rajdhani: ["Rajdhani"],
+      windsong: ["WindSong"]
     },
     colors: {
       primary: "#757976",

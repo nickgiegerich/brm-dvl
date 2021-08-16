@@ -33,7 +33,7 @@ export const Hero = () => {
           style={{ height: "50vh" }}
         >
           <div className="text-white text-5xl md:text-8xl  uppercase font-extralight font-mono">
-            <motion.div className="font-semibold" variants={titleVariants}>providers</motion.div>
+            <motion.div className="font-rajdhani font-semibold" variants={titleVariants}>providers</motion.div>
           </div>
         </div>
       </Parallax>

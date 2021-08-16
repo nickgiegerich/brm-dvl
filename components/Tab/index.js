@@ -24,8 +24,10 @@ export const Tab = ({ children, active = 0 }) => {
         {tabsData.map(({ tab }, idx) => (
           <div
             key={`Tab-Grid-${idx}`}
-            className={`text-center text-black text-lg md:text-2xl rounded-t-md py-8 cursor-pointer transform ease-in duration-100 font-montserrat font-bold ${
-              idx === activeTab ? "bg-brown " : "bg-primary shadow-inner"
+            className={`text-center text-black text-lg md:text-2xl rounded-t-md py-8 cursor-pointer transform ease-in duration-100 font-maitree font-semibold ${
+              idx === activeTab
+                ? "bg-brown"
+                : "bg-primary text-white shadow-inner bg-opacity-50"
             }`}
             onClick={() => setActiveTab(idx)}
           >

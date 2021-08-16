@@ -42,7 +42,7 @@ export const About = () => {
       <div className="text-primary flex flex-col font-montserrat">
         <div className="text-center text-5xl py-10 bg-gray-100">
           <FadeInWhenVisible>
-            <h2 className="font-montserrat font-normal text-black">lorem ipsum - dolor sit amet</h2>
+            <h2 className="font-maitree font-normal text-black">restore your body’s natural balance</h2>
           </FadeInWhenVisible>
           <div className="border-b-4 w-1/12 m-auto pt-5 border-primary" />
         </div>
@@ -56,8 +56,8 @@ export const About = () => {
                 tab={tab.title}
               >
                 <div className="pt-10">
-                  <p className="text-black text-lg py-4 px-5 ">{tab.content}</p>
-                  <p className="text-black text-lg py-4 px-5 ">
+                  <p className="text-black text-2xl py-4 px-5 font-maitree ">{tab.content}</p>
+                  <p className="text-black text-2xl py-4 px-5 font-maitree ">
                     {tab.multiContent}
                   </p>
                 </div>
