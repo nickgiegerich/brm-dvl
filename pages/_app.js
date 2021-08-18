@@ -1,11 +1,31 @@
 import "../styles/globals.css";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
-function MyApp({ Component, pageProps, router  }) {
+function MyApp({ Component, pageProps, router }) {
+  const [pageLoading, setPageLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = () => {
+      setPageLoading(true);
+    };
+    const handleComplete = () => {
+      setPageLoading(false);
+    };
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+  }, [router]);
+
   return (
     <AnimatePresence exitBeforeEnter>
       <AnimateSharedLayout>
-        <Component {...pageProps} key={router.route}/>
+        {pageLoading ? (
+          <div className="bg-black">loading</div>
+        ) : (
+          <Component {...pageProps} key={router.route} />
+        )}
       </AnimateSharedLayout>
     </AnimatePresence>
   );

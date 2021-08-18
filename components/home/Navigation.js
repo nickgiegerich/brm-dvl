@@ -47,7 +47,7 @@ export const DesktopNavigation = (props) => {
               Home
             </li>
           </Link>
-          <Link href="/team/providers">
+          <Link href="/providers">
             <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Providers
             </li>
@@ -57,7 +57,7 @@ export const DesktopNavigation = (props) => {
               New Patients
             </li>
           </Link>
-          <li
+          {/* <li
             className=" bg-gradient-to-r from-sage to-sage bg-growing-underline relative"
             onMouseOver={() => setDropdown(true)}
             onMouseLeave={() => setDropdown(false)}
@@ -83,7 +83,17 @@ export const DesktopNavigation = (props) => {
                 </Link>
               ))}
             </div>
-          </li>
+          </li> */}
+          <Link href="#">
+            <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
+              Patient Now
+            </li>
+          </Link>
+          <Link href="#">
+            <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
+              Contact
+            </li>
+          </Link>
         </ul>
       </nav>
     </>

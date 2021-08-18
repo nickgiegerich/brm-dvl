@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { Services } from "../components/services";
+import ErrorPage from "next/error";
 
 export default function ServicesPage() {
   return (
     <>
-      <Services />
+      <ErrorPage statusCode={404} />
     </>
   );
 }

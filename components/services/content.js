@@ -56,8 +56,8 @@ export const Content = () => {
   return (
     <div className="relative grid grid-cols-1">
       {/* COLUMN */}
-      <div className="grid grid-cols-1 sm:grid-cols-2">
-        {/* COLUMN - services */}
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2">
+       
         <div className="text-left m-10">
           <div className="text-5xl">Services</div>
           <div className="text-2xl pt-3">Lorem Ipsum - Dolor Sit</div>
@@ -72,15 +72,15 @@ export const Content = () => {
           </div>
           <div className="grid grid-cols-2 gap-3 pt-5">
             <button className="transition ease-in-out uppercase bg-sage rounded-md py-4 shadow-2xl text-black hover:bg-primary hover:text-white">
-              how can we help?
+              contact us
             </button>
             <button className="transition ease-in-out uppercase bg-beige rounded-md  py-4 shadow-2xl text-black hover:bg-primary hover:text-white">
-              schedule an appointment
+              patient now
             </button>
           </div>
         </div>
 
-        {/* COLUMN - img */}
+
         <div className="flex justify-center">
           <div className="m-10">
             <img
@@ -89,7 +89,7 @@ export const Content = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="bg-gray-200  rounded-t-3xl">
         <div className="text-center text-5xl m-3">Lorem Ipsum</div>
         <div className="text-center text-xl m-3">

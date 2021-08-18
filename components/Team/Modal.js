@@ -5,7 +5,7 @@ const backdrop = {
   hidden: { opacity: 0 },
 };
 
-export const Modal = ({ showModal, setShowModal, title, desc3, desc4 }) => {
+export const Modal = ({ showModal, setShowModal, title, desc3, desc4, desc5 }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (
@@ -37,6 +37,9 @@ export const Modal = ({ showModal, setShowModal, title, desc3, desc4 }) => {
                   </p>
                   <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
                     {desc4}
+                  </p>
+                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+                    {desc5}
                   </p>
                 </div>
                 {/* FOOTER */}
