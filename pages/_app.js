@@ -16,13 +16,13 @@ function MyApp({ Component, pageProps, router }) {
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
     router.events.on("routeChangeError", handleComplete);
-  }, [router]);
+  }, []);
 
   return (
     <AnimatePresence exitBeforeEnter>
       <AnimateSharedLayout>
         {pageLoading ? (
-          <div className="bg-black">loading</div>
+          <div className="bg-black text-white">loading</div>
         ) : (
           <Component {...pageProps} key={router.route} />
         )}
