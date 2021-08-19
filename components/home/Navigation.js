@@ -89,7 +89,7 @@ export const DesktopNavigation = (props) => {
               Patient Now
             </li>
           </Link>
-          <Link href="#">
+          <Link href="/contact">
             <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Contact
             </li>
