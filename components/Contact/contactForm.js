@@ -1,7 +1,20 @@
-import { useState } from "react";
+import { useState, createRef } from "react";
+import { BsCheckCircle } from "react-icons/bs";
+import { VscError } from "react-icons/vsc";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactForm = () => {
-  //   const [error, setError] = useState(false);
+  const recaptchaRef = createRef();
+  const [captchaSuccess, setCaptchaSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
+  const [vals, setVals] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const [errorFields, setErrorFields] = useState({
     firstname: false,
     lastname: false,
@@ -9,6 +22,20 @@ export const ContactForm = () => {
     phone: false,
     message: false,
   });
+
+  const onReCAPTCHAChange = (captchaCode) => {
+    if (!captchaCode) {
+      return;
+    }
+    setCaptchaSuccess(true);
+  };
+
+  const handleChange = (e) => {
+    setVals({
+      ...vals,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = async (e) => {
     try {
@@ -24,7 +51,7 @@ export const ContactForm = () => {
 
       Array.from(e.currentTarget.elements).forEach((field) => {
         if (!field.name) return;
-        if (field.value === "") {
+        if (field.value === "" && field.name !== "g-recaptcha-response") {
           error = true;
           if (field.name === "firstname") firstname = true;
           if (field.name === "lastname") lastname = true;
@@ -43,147 +70,205 @@ export const ContactForm = () => {
         message: message,
       });
 
-      if (!error) {
+      if (!error && captchaSuccess) {
         await fetch("/api/contact", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(formData),
-        });
+        })
+          .then(() => {
+            setVals({
+              firstname: "",
+              lastname: "",
+              email: "",
+              phone: "",
+              message: "",
+            });
+          })
+          .then(() => {
+            setFailure(false);
+            setSuccess(true);
+          });
       } else {
         throw new Error("Form Errors");
       }
     } catch (e) {
       console.log(e);
+      setSuccess(false);
+      setFailure(true);
     }
   };
   return (
-    <form method="post" onSubmit={handleSubmit} className="w-full max-w-lg">
-      <div className="grid grid-cols-1 w-screen px-28 md:px-40 lg:px-64 xl:px-80 pt-10 pb-5">
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
-            >
-              First Name
-            </label>
-            <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
-                errorFields.firstname ? "border-red-500" : "border-gray-200"
-              }`}
-              id="grid-first-name"
-              type="text"
-              name="firstname"
-              placeholder="Jane"
-            />
-            {errorFields.firstname && (
-              <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p>
-            )}
+    <>
+      <div className="grid w-screen grid-rows-1 text-center px-40 md:px-64 lg:px-80 xl:px-96 pt-10">
+        {success && (
+          <div className="shadow-lg rounded-lg py-7 border border-green-500">
+            <div className="grid grid-rows-2 text-center">
+              <span className="flex justify-center">
+                <BsCheckCircle className="text-green-500 text-3xl text-center" />
+              </span>
+              <span>message sent, we will be in touch shortly.</span>
+            </div>
           </div>
-          <div className="w-full md:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-last-name"
-            >
-              Last Name
-            </label>
-            <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
-                errorFields.lastname ? "border-red-500" : "border-gray-200"
-              }`}
-              id="grid-last-name"
-              type="text"
-              name="lastname"
-              placeholder="Doe"
-            />
-            {errorFields.lastname && (
-              <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p>
-            )}
+        )}
+        {failure && (
+          <div className="shadow-lg rounded-lg py-7 border border-red-500">
+            <div className="grid grid-rows-2 text-center">
+              <span className="flex justify-center">
+                <VscError className="text-red-500 text-3xl text-center" />
+              </span>
+              <span>message failed, please try submitting the form again.</span>
+            </div>
           </div>
-          <div className="w-full md:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-password"
-            >
-              E-mail
-            </label>
-            <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
-                errorFields.email ? "border-red-500" : "border-gray-200"
-              }`}
-              id="email"
-              type="email"
-              name="email"
-              placeholder="jane@example.com"
-            />
-            {errorFields.lastname && (
-              <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p>
-            )}
-          </div>
-          <div className="w-full md:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-password"
-            >
-              Primary Phone
-            </label>
-            <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
-                errorFields.email ? "border-red-500" : "border-gray-200"
-              }`}
-              id="phone"
-              type="phone"
-              name="phone"
-              placeholder="555-555-5555"
-            />
-            {errorFields.lastname && (
-              <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p>
-            )}
-          </div>
-        </div>
-
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="grid-password"
-            >
-              Message
-            </label>
-            <textarea
-              className={`resize appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 ${
-                errorFields.message ? "border-red-500" : "border-gray-200"
-              }`}
-              id="message"
-              name="message"
-            />
-            {errorFields.message && (
-              <p className="text-red-500 text-xs italic">
-                Please fill out this field.
-              </p>
-            )}
-          </div>
-        </div>
-        <div className="md:flex md:items-center">
-          <div className="md:w-1/3">
-            <button
-              className="shadow bg-sage hover:bg-beige focus:shadow-outline focus:outline-none text-white hover:text-black font-bold py-2 px-4 rounded"
-              type="submit"
-            >
-              Send
-            </button>
-          </div>
-          <div className="md:w-2/3"></div>
-        </div>
+        )}
       </div>
-    </form>
+      <form method="post" onSubmit={handleSubmit} className="w-full max-w-lg">
+        <div className="grid grid-cols-1 w-screen px-28 md:px-40 lg:px-64 xl:px-80 pt-10 pb-5">
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-first-name"
+              >
+                First Name
+              </label>
+              <input
+                className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                  errorFields.firstname ? "border-red-500" : "border-gray-200"
+                }`}
+                id="grid-first-name"
+                type="text"
+                name="firstname"
+                placeholder="Jane"
+                value={vals.firstname}
+                onChange={handleChange}
+              />
+              {errorFields.firstname && (
+                <p className="text-red-500 text-xs italic">
+                  Please fill out this field.
+                </p>
+              )}
+            </div>
+            <div className="w-full md:w-1/2 px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-last-name"
+              >
+                Last Name
+              </label>
+              <input
+                className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                  errorFields.lastname ? "border-red-500" : "border-gray-200"
+                }`}
+                id="grid-last-name"
+                type="text"
+                name="lastname"
+                placeholder="Doe"
+                value={vals.lastname}
+                onChange={handleChange}
+              />
+              {errorFields.lastname && (
+                <p className="text-red-500 text-xs italic">
+                  Please fill out this field.
+                </p>
+              )}
+            </div>
+            <div className="w-full md:w-1/2 px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                E-mail
+              </label>
+              <input
+                className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                  errorFields.email ? "border-red-500" : "border-gray-200"
+                }`}
+                id="email"
+                type="email"
+                name="email"
+                placeholder="jane@example.com"
+                value={vals.email}
+                onChange={handleChange}
+              />
+              {errorFields.email && (
+                <p className="text-red-500 text-xs italic">
+                  Please fill out this field.
+                </p>
+              )}
+            </div>
+            <div className="w-full md:w-1/2 px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                Primary Phone
+              </label>
+              <input
+                className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                  errorFields.phone ? "border-red-500" : "border-gray-200"
+                }`}
+                id="phone"
+                type="phone"
+                name="phone"
+                placeholder="555-555-5555"
+                value={vals.phone}
+                onChange={handleChange}
+              />
+              {errorFields.phone && (
+                <p className="text-red-500 text-xs italic">
+                  Please fill out this field.
+                </p>
+              )}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                Message
+              </label>
+              <textarea
+                className={`resize appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 ${
+                  errorFields.message ? "border-red-500" : "border-gray-200"
+                }`}
+                id="message"
+                name="message"
+                value={vals.message}
+                onChange={handleChange}
+              />
+              {errorFields.message && (
+                <p className="text-red-500 text-xs italic">
+                  Please fill out this field.
+                </p>
+              )}
+            </div>
+          </div>
+          <div className="md:flex md:items-center">
+          <div className="md:w-2/3 pb-4">
+              {" "}
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                size="normal"
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={onReCAPTCHAChange}
+              />
+            </div>
+            <div className="md:w-1/3">
+              <button
+                className="shadow bg-sage hover:bg-beige focus:shadow-outline focus:outline-none text-white hover:text-black font-bold py-2 px-4 rounded"
+                type="submit"
+              >
+                Send
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </form>
+    </>
   );
 };

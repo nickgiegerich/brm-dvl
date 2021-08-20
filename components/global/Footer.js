@@ -24,7 +24,7 @@ export const Footer = () => {
                 target="_blank"
                 href="http://maps.google.com/?q=621+North+College+Rd,+Suite+103,+Twin+Falls,+Idaho+83301"
                 rel="noopener noreferrer"
-                className="text-green-400 lg:text-2xl md:text-xl text-xl hover:underline"
+                className="lg:text-2xl md:text-xl text-xl hover:underline"
               >
                 621 North College Rd, Suite 103, Twin Falls, Idaho 83301
               </a>
@@ -33,13 +33,13 @@ export const Footer = () => {
           <div className="grid grid-rows-3">
             <div>
               Phone:{" "}
-              <span>
+              <span className="text-beige text-xl">
                 <Link href="tel:2085393155">(208) 539-3155</Link>
               </span>
             </div>
             <div>
               Email:{" "}
-              <span>
+              <span className="text-beige text-xl">
                 <a href="mailto:info@balanceregenrative.org">
                   info@balanceregenrative.org
                 </a>
@@ -47,7 +47,7 @@ export const Footer = () => {
             </div>
             <div>
               Fax:{" "}
-              <span>
+              <span className="text-beige text-xl">
                 <Link href="tel:18665072545">1(866) 507-2545</Link>
               </span>
             </div>
@@ -61,13 +61,16 @@ export const Footer = () => {
             <Link href="/">Home</Link>
           </div>
           <div className="py-5">
-            <Link href="/team/providers">Providers</Link>
+            <Link href="/providers">Providers</Link>
           </div>
           <div className="py-5">
             <Link href="/newpatients">New Patients</Link>
           </div>
           <div className="py-5">
             <Link href="/services">Services</Link>
+          </div>
+          <div className="py-5">
+            <Link href="/contact">Contact</Link>
           </div>
         </div>
         <div className="flex flex-col justify-center">

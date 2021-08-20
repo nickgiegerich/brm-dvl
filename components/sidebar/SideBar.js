@@ -32,7 +32,6 @@ function useOutsideClicker(ref, open) {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
         outside = true;
-        console.log(outside);
       }
     }
 

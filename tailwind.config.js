@@ -28,7 +28,8 @@ module.exports = {
       opBlack: "#808080",
       white: "#FFF",
       gray: colors.gray,
-      red: colors.red
+      red: colors.red,
+      green: colors.green
     },
     extend: {},
   },

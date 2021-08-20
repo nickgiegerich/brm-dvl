@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps, router }) {
     if (initialLoad) {
       const timer = setTimeout(() => {
         setInitialLoad(false);
-        console.log("it is working");
       }, 3000);
       return () => clearTimeout(timer);
     }

@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import MenuItem from "./MenuItem";
 import styles from "../../styles/Navigation.module.css";
 
-const logo = "/images/sidebar/title.png";
+const logo = "/images/home/logo-white.svg";
+
 
 const variants = {
   open: {
@@ -39,14 +40,14 @@ function Navigation() {
   return (
     <>
       <motion.div variants={variants}>
-        <motion.img
+        {/* <motion.img
           variants={logoVariants}
           src={logo}
           className={styles.sideBarLogo}
           alt="Sidebar Logo"
           height="auto"
-          width="300px"
-        />
+          width="50px"
+        /> */}
       </motion.div>
       <motion.ul className={styles.sideBarUl} variants={variants}>
         {pages.map((i, index) => (
@@ -65,15 +66,20 @@ function Navigation() {
 
 const pages = [
   { name: "Home", link: "/", icon: null },
-  { name: "Providers", link: "/team/providers", icon: null },
+  { name: "Providers", link: "/providers", icon: null },
   {
     name: "New Patients",
     link: "/newpatients",
     icon: null,
   },
+  // {
+  //   name: "Services",
+  //   link: "/services",
+  //   icon: null,
+  // },
   {
-    name: "Services",
-    link: "/services",
+    name: "Contact",
+    link: "/contact",
     icon: null,
   },
 ];
