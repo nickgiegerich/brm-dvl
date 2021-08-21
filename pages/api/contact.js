@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       `;
 
   const data = {
-    to: "ngiegerich@gmail.com",
+    to: "info@balanceregenerativemedicine.org",
     from: "info@balanceregenerativemedicine.org",
     subject: `New message from ${body.firstname}`,
     text: message,
