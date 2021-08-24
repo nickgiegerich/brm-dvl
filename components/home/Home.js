@@ -33,7 +33,7 @@ export const Home = () => {
         </title>
         <meta
           name="description"
-          content="Natural medicine and healing practice in Twin Falls Idaho"
+          content="Functional and Integrative medical clinic dedicated to optimizing health, individualizing care and offering restorative treatments to help your body find it’s natural balance"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

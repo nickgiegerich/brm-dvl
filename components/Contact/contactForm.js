@@ -100,7 +100,7 @@ export const ContactForm = () => {
   };
   return (
     <>
-      <div className="grid w-screen grid-rows-1 text-center px-40 md:px-64 lg:px-80 xl:px-96 pt-10">
+      <div className="grid w-screen grid-rows-1 text-center px-64 md:px-64 lg:px-80 xl:px-96 pt-10">
         {success && (
           <div className="shadow-lg rounded-lg py-7 border border-green-500">
             <div className="grid grid-rows-2 text-center">

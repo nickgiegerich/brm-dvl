@@ -86,7 +86,7 @@ export const DesktopNavigation = (props) => {
           </li> */}
           <Link href="#">
             <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
-              Patient Now
+              Patient Portal
             </li>
           </Link>
           <Link href="/contact">

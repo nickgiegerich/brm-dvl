@@ -30,7 +30,7 @@ export const Footer = () => {
               </a>
             </span>
           </div>
-          <div className="grid grid-rows-3">
+          <div className="grid gap-2 grid-rows-3">
             <div>
               Phone:{" "}
               <span className="text-beige text-xl">
@@ -40,8 +40,8 @@ export const Footer = () => {
             <div>
               Email:{" "}
               <span className="text-beige text-xl">
-                <a href="mailto:info@balanceregenrative.org">
-                  info@balanceregenrative.org
+                <a href="mailto:info@balanceregenerativemedicine.org">
+                  info@balanceregenerativemedicine.org
                 </a>
               </span>
             </div>
@@ -52,24 +52,27 @@ export const Footer = () => {
               </span>
             </div>
           </div>
-          <p className="max-w-lg text-left pt-3  pb-3">
+          <p className="max-w-lg text-center md:text-left pt-3  pb-3">
             Copyright © 2021 Balance Regenrative Medicine. All rights reserved.
           </p>
         </div>
         <div className="flex flex-col justify-evenly">
-          <div className="py-5">
+          <div className="py-1 hover:underline">
             <Link href="/">Home</Link>
           </div>
-          <div className="py-5">
+          <div className="py-1  hover:underline">
             <Link href="/providers">Providers</Link>
           </div>
-          <div className="py-5">
+          <div className="py-1  hover:underline">
             <Link href="/newpatients">New Patients</Link>
           </div>
-          <div className="py-5">
-            <Link href="/services">Services</Link>
+          <div className="py-1  hover:underline">
+            <Link href="/#">Patient Portal</Link>
           </div>
-          <div className="py-5">
+          {/* <div className="py-5">
+            <Link href="/services">Services</Link>
+          </div> */}
+          <div className="py-1  hover:underline">
             <Link href="/contact">Contact</Link>
           </div>
         </div>
@@ -88,14 +91,11 @@ export const Footer = () => {
           </form>
 
           <div className="flex flex-row justify-evenly pt-3">
-            <a className="text-4xl pr-5" href="#">
+            <a className="text-4xl pr-5" href="https://www.facebook.com/balanceregenerativemedicine/" target="_blank" rel="noreferrer">
               <FaFacebook className="text-white hover:text-brown" />
             </a>
-            <a className="text-4xl pr-5" href="#">
+            <a className="text-4xl pr-5" href="https://www.instagram.com/balance.regenerative.medicine/" target="_blank" rel="noreferrer">
               <FaInstagramSquare className="text-white hover:text-brown" />
-            </a>
-            <a className="text-4xl pr-5" href="#">
-              <FaTwitterSquare className="text-white hover:text-brown" />
             </a>
           </div>
           <div className="hidden">

@@ -5,17 +5,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      montserrat: ["Montserrat"],
-      cormorant: [`"Cormorant Garamond"`],
-      martel: ["Martel"],
-      marcellus: ["Marcellus"],
-      arsenal: ["Arsenal"],
-      laila: ["Laila"],
-      encode: [`"Encode Sans Condensed"`],
-      niramit: ["Niramit"],
       maitree: ["Maitree"],
       rajdhani: ["Rajdhani"],
-      windsong: ["WindSong"]
+      sansCondensed: [`"Encode Sans Condensed"`],
+      // windsong: ["WindSong"]
     },
     colors: {
       primary: "#757976",
@@ -29,7 +22,8 @@ module.exports = {
       white: "#FFF",
       gray: colors.gray,
       red: colors.red,
-      green: colors.green
+      green: colors.green,
+      blue: colors.blue
     },
     extend: {},
   },

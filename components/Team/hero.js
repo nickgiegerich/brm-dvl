@@ -1,7 +1,7 @@
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 
-const bgImage = "/images/providers/providers-hero.png";
+const bgImage = "/images/providers/ProvidersHeader.png";
 
 const titleVariants = {
   initial: {

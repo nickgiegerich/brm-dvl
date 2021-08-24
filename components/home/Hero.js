@@ -40,7 +40,7 @@ export const Hero = () => {
             />
 
             <div>
-              <h1 className="text-5xl text-white font-windsong">Get Answers. Feel Better.</h1>
+              <h1 className="text-5xl text-white font-sansCondensed font-extralight">Get Answers. Feel Better.</h1>
               <div className="border-b-4 w-1/5 m-auto pt-5 text-white" />
             </div>
           </div>
