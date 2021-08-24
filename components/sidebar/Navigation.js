@@ -78,6 +78,11 @@ const pages = [
   //   icon: null,
   // },
   {
+    name: "Patient Portal",
+    link: "/#",
+    icon: null,
+  },
+  {
     name: "Contact",
     link: "/contact",
     icon: null,
