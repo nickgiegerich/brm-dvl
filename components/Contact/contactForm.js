@@ -100,7 +100,7 @@ export const ContactForm = () => {
   };
   return (
     <>
-      <div className="grid w-screen grid-rows-1 text-center px-64 md:px-64 lg:px-80 xl:px-96 pt-10">
+      <div className="grid w-screen grid-rows-1 text-center px-0 md:px-64 lg:px-80 xl:px-96 pt-10">
         {success && (
           <div className="shadow-lg rounded-lg py-7 border border-green-500">
             <div className="grid grid-rows-2 text-center">
@@ -123,7 +123,7 @@ export const ContactForm = () => {
         )}
       </div>
       <form method="post" onSubmit={handleSubmit} className="w-full max-w-lg">
-        <div className="grid grid-cols-1 w-screen px-28 md:px-40 lg:px-64 xl:px-80 pt-10 pb-5">
+        <div className="grid grid-cols-1 w-screen px-7 md:px-40 lg:px-64 xl:px-80 pt-10 pb-5">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -247,19 +247,19 @@ export const ContactForm = () => {
               )}
             </div>
           </div>
-          <div className="md:flex md:items-center">
-          <div className="md:w-2/3 pb-4">
+          <div className="flex md:flex md:items-center">
+          <div className="w-full md:w-full pb-4">
               {" "}
               <ReCAPTCHA
                 ref={recaptchaRef}
-                size="normal"
+                size="compact"
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={onReCAPTCHAChange}
               />
             </div>
-            <div className="md:w-1/3">
+            <div className="w-full md:w-full">
               <button
-                className="shadow bg-sage hover:bg-beige focus:shadow-outline focus:outline-none text-white hover:text-black font-bold py-2 px-4 rounded"
+                className="shadow bg-sage hover:bg-beige focus:shadow-outline focus:outline-none text-white hover:text-black font-bold py-2 px-7 rounded"
                 type="submit"
               >
                 Send
