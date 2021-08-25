@@ -79,7 +79,7 @@ const pages = [
   // },
   {
     name: "Patient Portal",
-    link: "/#",
+    link: "https://www.MyPatientNOW.com/?PID=1702",
     icon: null,
   },
   {

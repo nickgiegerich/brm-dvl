@@ -67,7 +67,7 @@ export const Footer = () => {
             <Link href="/newpatients">New Patients</Link>
           </div>
           <div className="py-1  hover:underline">
-            <Link href="/#">Patient Portal</Link>
+            <a href="https://www.MyPatientNOW.com/?PID=1702" target="_blank" rel="noreferrer" >Patient Portal</a>
           </div>
           {/* <div className="py-5">
             <Link href="/services">Services</Link>

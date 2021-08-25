@@ -84,11 +84,11 @@ export const DesktopNavigation = (props) => {
               ))}
             </div>
           </li> */}
-          <Link href="#">
+          <a href="https://www.MyPatientNOW.com/?PID=1702" target="_blank" rel="noreferrer" >
             <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Patient Portal
             </li>
-          </Link>
+          </a>
           <Link href="/contact">
             <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Contact

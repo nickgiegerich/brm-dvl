@@ -117,7 +117,7 @@ export const ContactForm = () => {
               <span className="flex justify-center">
                 <VscError className="text-red-500 text-3xl text-center" />
               </span>
-              <span>message failed, please try submitting the form again.</span>
+              <span>message failed, make sure all fields are filled and the ReCAPTCHA is checked.</span>
             </div>
           </div>
         )}
