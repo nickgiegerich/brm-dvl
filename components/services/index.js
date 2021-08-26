@@ -22,11 +22,17 @@ export const Services = () => {
   return (
     <div>
       <Head>
-        <title>Balance Regenerative Medicine</title>
+        <title>
+          Services - Balance Regenerative Medicine
+        </title>
         <meta
           name="description"
-          content="Balance Regenerative Medicine New Patients"
+          content="Services provided by Balance Regenerative Medicine located in Twin Falls, Idaho"
         />
+        <meta property="og:title" content="Services - Balance Regenerative Medicine in Twin Falls, Idaho" />
+        <meta property="og:description" content="Functional and Integrative medical clinic dedicated to optimizing health, individualizing care and offering restorative treatments to help your body find it’s natural balance" />
+        <meta property="og:url" content="https://www.balanceregenerativemedicine.org/services" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <motion.div variants={variants} initial="initial" animate="animate" className="font-maitree">
