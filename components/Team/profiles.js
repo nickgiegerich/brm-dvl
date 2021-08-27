@@ -3,6 +3,19 @@ import { Modal } from "./Modal";
 
 const teamMembers = [
   {
+    name: "Libby Cameron ",
+    title: "Women's Health Nurse Practitioner - Board Certified",
+    picture:
+      "data:image/jpeg;base64,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",
+    desc1:
+      "Libby is a Women's Health Nurse Practitioner who graduated first in class from Harbor-UCLA in 2004. She has more than 20 years of experience prior to NP school, and has focused in cardiovascular, endocrine, and internal medicine. She now specializes in women’s health, primary care, and anti-aging medicine, and her interests include bio-identical hormone replacement therapy, sexual dysfunction, incontinence, IV micronutrient therapy, aesthetic procedures, and additional regenerative pathways to health.",
+    desc2: "",
+    desc3:
+      "Libby raised all boys, in her free time she enjoys rockhounding, hiking, panning for gold, playing tennis, and gardening. She is compassionate and dedicated to helping people reach their highest level of wellness. Regenerative Medicine is her passion and she looks forward to helping everyone live a healthier and more vibrant life.",
+    desc4: "",
+    desc5: "",
+  },
+  {
     name: "Jen Gardner",
     title: "Family Nurse Practioner - Board Certified",
     picture:
@@ -31,19 +44,6 @@ const teamMembers = [
       "Erica, along with her healthcare team and the help of the local charity, coordinated and implemented testing for COVID-19 for first responders and essential workers during the peak of the Covid pandemic.She continues to provide wellness screenings throughout her facets she is associated with, helping to bridge the healthcare gap in rural areas throughout the greater Twin Falls area.",
     desc5:
       "Erica and her husband moved to Twin Falls, Idaho in2018. Her husband is currently completing his Bachelor of Science in Nursing. Together, they are raising two boys, two girls, a few chickens, rabbits, and two dogs. The family likes to explore the hidden treasures in Idaho and the surrounding states. Erica is the board President for the local swim team--The Magic Valley Marlins. She loves traveling, kayaking, hiking, and attending swim meets with her family in her spare time.",
-  },
-  {
-    name: "Libby Cameron ",
-    title: "Women's Health Nurse Practitioner - Board Certified",
-    picture:
-      "data:image/jpeg;base64,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",
-    desc1:
-      "Libby is a Women's Health Nurse Practitioner who graduated first in class from Harbor-UCLA in 2004. She has more than 20 years of experience prior to NP school, and has focused in cardiovascular, endocrine, and internal medicine. She now specializes in women’s health, primary care, and anti-aging medicine, and her interests include bio-identical hormone replacement therapy, sexual dysfunction, incontinence, IV micronutrient therapy, aesthetic procedures, and additional regenerative pathways to health.",
-    desc2: "",
-    desc3:
-      "Libby raised all boys, in her free time she enjoys rockhounding, hiking, panning for gold, playing tennis, and gardening. She is compassionate and dedicated to helping people reach their highest level of wellness. Regenerative Medicine is her passion and she looks forward to helping everyone live a healthier and more vibrant life.",
-    desc4: "",
-    desc5: ""
   },
 ];
 
@@ -109,7 +109,12 @@ export const Profiles = () => {
             <button
               className=" z-10 bg-secondary font-bold uppercase text-sm px-6 py-3 mx-3 rounded shadow hover:shadow-lg  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               onClick={() =>
-                handleReadMore(member.name, member.desc3, member.desc4, member.desc5)
+                handleReadMore(
+                  member.name,
+                  member.desc3,
+                  member.desc4,
+                  member.desc5
+                )
               }
             >
               <span className="text-gray-100 underline">READ MORE</span>
