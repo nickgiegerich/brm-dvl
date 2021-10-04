@@ -36,15 +36,15 @@ const teamMembers = [
     picture: "/images/providers/erica.jpg",
     blur: "/images/providers/erica.jpg",
     desc1:
-      "Erica Cameron is a Board Certified Adult Nurse Practitioner with a broad base of knowledge that spans over 20 years of experience in healthcare. She holds a Master of Science in Nursing from Emory University in Atlanta, Georgia, a Bachelor of Science in Nursing from Brenau University in Gainesville,Georgia, and a Bachelor of Science in Psychology from Georgia State University.",
+      "Erica Cameron is a Board Certified Adult Nurse Practitioner with over 16 years of experience in healthcare. She holds a Master of Science in Nursing from Emory University, a Bachelor of Science in Nursing from Brenau University, and a Bachelor of Science in Psychology from Georgia State University.",
     desc2:
-      "She has extensive experience in Oncology, Hematology, Palliative Care, Hospice, Transitional care, Urgent Care, Primary Care, and Counseling. She has integrated her expertise and knowledge into her care model as she creates an individualized approach that followsa more allopathic and holistic pathway for better healthcare outcomes.",
+      "She has extensive experience in Oncology, Palliative Care, Integrative Medicine, Urgent Care, and Transitional Care. She integrates this experience and knowledge into her method of care as she creates an individualized approach that follows a more allopathic and holistic pathway to health.",
     desc3:
-      "Erica battles her own health issues on a daily basis. Being diagnosed with diabetes and autoimmune disease has allowed her to understand the challengeand frustration that patients experience when they endure intolerable side effects and failed treatments.She empathizes with her patients and works alongside them to create a treatment plan that is conducive to each individual patient while understanding their needs and well being to createa balance and a better quality of life. This has fueled Erica’s desire to find answers for her patients struggling with chronic disease and improve their lifestyle choices.",
+      "Erica battles her own health issues, and her pathway to being diagnosed with inflammatory bowel disease and diabetes has allowed her to understand the frustration that patients experience when they endure intolerable side effects and failed treatments. She empathizes with her patients, and she works alongside them to create a treatment plan that is feasible.",
     desc4:
-      "Erica, along with her healthcare team and the help of the local charity, coordinated and implemented testing for COVID-19 for first responders and essential workers during the peak of the Covid pandemic.She continues to provide wellness screenings throughout her facets she is associated with, helping to bridge the healthcare gap in rural areas throughout the greater Twin Falls area.",
+      "Erica and her husband Michael moved to Idaho in 2018. They are raising four children--two boys and two girls--a few chickens, rabbits, and their dogs, Dexter and Winston. Her husband is completing his Bachelor of Science in Nursing, and in their spare time they love to travel, kayak, attend swim meets, and explore hidden treasures in Idaho and the surrounding areas.",
     desc5:
-      "Erica and her husband moved to Twin Falls, Idaho in2018. Her husband is currently completing his Bachelor of Science in Nursing. Together, they are raising two boys, two girls, a few chickens, rabbits, and two dogs. The family likes to explore the hidden treasures in Idaho and the surrounding states. Erica is the board President for the local swim team--The Magic Valley Marlins. She loves traveling, kayaking, hiking, and attending swim meets with her family in her spare time.",
+      "",
   },
 ];
 
