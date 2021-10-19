@@ -3,19 +3,19 @@ import { Modal } from "./Modal";
 import Image from "next/image";
 
 const teamMembers = [
-  {
-    name: "Libby Cameron ",
-    title: "Women's Health Nurse Practitioner - Board Certified",
-    picture: "/images/providers/libby.jpg",
-    blur: "/images/providers/libby.jpg",
-    desc1:
-      "Libby is a Women's Health Nurse Practitioner who graduated first in class from Harbor-UCLA in 2004. She has more than 20 years of experience prior to NP school, and has focused in cardiovascular, endocrine, and internal medicine. She now specializes in women’s health, primary care, and anti-aging medicine, and her interests include bio-identical hormone replacement therapy, sexual dysfunction, incontinence, IV micronutrient therapy, aesthetic procedures, and additional regenerative pathways to health.",
-    desc2: "",
-    desc3:
-      "Libby raised all boys, in her free time she enjoys rockhounding, hiking, panning for gold, playing tennis, and gardening. She is compassionate and dedicated to helping people reach their highest level of wellness. Regenerative Medicine is her passion and she looks forward to helping everyone live a healthier and more vibrant life.",
-    desc4: "",
-    desc5: "",
-  },
+  // {
+  //   name: "Libby Cameron ",
+  //   title: "Women's Health Nurse Practitioner - Board Certified",
+  //   picture: "/images/providers/libby.jpg",
+  //   blur: "/images/providers/libby.jpg",
+  //   desc1:
+  //     "Libby is a Women's Health Nurse Practitioner who graduated first in class from Harbor-UCLA in 2004. She has more than 20 years of experience prior to NP school, and has focused in cardiovascular, endocrine, and internal medicine. She now specializes in women’s health, primary care, and anti-aging medicine, and her interests include bio-identical hormone replacement therapy, sexual dysfunction, incontinence, IV micronutrient therapy, aesthetic procedures, and additional regenerative pathways to health.",
+  //   desc2: "",
+  //   desc3:
+  //     "Libby raised all boys, in her free time she enjoys rockhounding, hiking, panning for gold, playing tennis, and gardening. She is compassionate and dedicated to helping people reach their highest level of wellness. Regenerative Medicine is her passion and she looks forward to helping everyone live a healthier and more vibrant life.",
+  //   desc4: "",
+  //   desc5: "",
+  // },
   {
     name: "Jen Gardner",
     title: "Family Nurse Practioner - Board Certified",
