@@ -15,13 +15,10 @@ const tabContent = [
   {
     title: "Our Mission",
     content:
-      "Our mission at Balance Regenerative Medicine is to promote " +
-      "wellness and longevity through an individualized approach that " +
-      "identifies the root cause of disease and provides integrative, " +
-      "functional, and holistic treatments to reverse disease and restore " +
-      "the body’s natural balance. We believe in the body’s innate " +
-      "ability to heal and find balance, and we are committed to " +
-      "partnering with each patient throughout their journey to wellness.",
+      "Our mission is to promote wellness and longevity through an individualized approach that identifies the " +
+      "root cause of dysfunction and disease and provides integrative and holistic care and treatment. We " +
+      "believe in the innate ability of the human body to heal and find balance and are committed to " +
+      "partnering with each patient throughout their wellness journey. ",
     multiContent: "",
     tabImg: "/images/tabs/mission.png",
   },
