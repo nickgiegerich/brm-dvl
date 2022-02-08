@@ -84,7 +84,7 @@ export const DesktopNavigation = (props) => {
               ))}
             </div>
           </li> */}
-          <a href="https://www.MyPatientNOW.com/?PID=1702" target="_blank" rel="noreferrer" >
+          <a href="https://25435.portal.athenahealth.com/" target="_blank" rel="noreferrer" >
             <li className="bg-gradient-to-r from-sage to-sage bg-growing-underline">
               Patient Portal
             </li>

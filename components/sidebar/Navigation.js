@@ -79,7 +79,7 @@ const pages = [
   // },
   {
     name: "Patient Portal",
-    link: "https://www.MyPatientNOW.com/?PID=1702",
+    link: "https://25435.portal.athenahealth.com/",
     icon: null,
   },
   {
